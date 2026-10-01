@@ -2,8 +2,8 @@
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. Gallego Cal, Guillermo
+1. Sanchez Gonzalez, Alejandro
 1. Apellidos, Nombre
 1. Apellidos, Nombre
 

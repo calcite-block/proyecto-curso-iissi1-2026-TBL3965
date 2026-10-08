@@ -1,6 +1,6 @@
-# Título Proyecto
+# Gimnasio
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L3-ABS-2
 
 1. Gallego Cal, Guillermo
 1. Sanchez Gonzalez, Alejandro

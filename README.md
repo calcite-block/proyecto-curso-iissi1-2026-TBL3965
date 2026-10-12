@@ -21,6 +21,14 @@
 
 ### 3.2. Usuarios del sistema
 
+Los usuarios del sistema son aquellas personas las cuales van a utilizar la aplicación y realizar operaciones con ella. En nuestro sistema de gestión del  Gimnasio, tenemos tres usuarios posibles, que son el administrador del gimnasio, el socio y el entrenador. Cada uno tendrá diferentes responsabilidades y funcionalidades según su papel dentro del gimnasio.
+
+El administrador del gimnasio es quien gestiona la información general del gimnasio. Tendrá acceso a las funciones de gestión de socios, planes de membresía, matrículas, entrenadores, clases, salas, horarios y pagos. Su función principal será garantizar el correcto funcionamiento y la organización de las actividades del gimnasio.
+
+El socio será el usuario que esté inscrito en el gimnasio y utilice el sistema para consultar y gestionar su actividad. Podrá consultar el estado y la fecha de finalización de su matrícula, visualizar las clases disponibles y sus horarios, realizar o cancelar reservas y consultar la información de sus pagos.
+
+El entrenador será el profesional encargado de impartir las clases y actividades del gimnasio. A través del sistema podrá consultar las clases que tiene asignadas, revisar sus horarios y las salas en las que se desarrollan, así como consultar las reservas de sus clases para conocer la asistencia prevista.
+
 ## 4. Catálogo de requisitos
 
 ### 4.1. Requisitos funcionales

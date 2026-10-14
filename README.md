@@ -21,7 +21,6 @@ Actividad deportiva: Ejercicio o práctica física que se realiza para mejorar l
 
 Clase dirigida: Actividad deportiva organizada e impartida por un entrenador, con una duración, un horario y una capacidad máxima determinados.
 
-![2019053113-clases-dirigidas-gimnasio-plantilla](2019053113-clases-dirigidas-gimnasio-plantilla.jpg)
 
 Capacidad máxima: Número máximo de personas que pueden utilizar una sala o participar en una clase de forma simultánea, según los límites establecidos.
 
@@ -29,7 +28,7 @@ Capacidad máxima: Número máximo de personas que pueden utilizar una sala o pa
 
 Entrenador: Profesional encargado de dirigir actividades deportivas, orientar a los socios durante el ejercicio y supervisar el desarrollo de las clases que tiene asignadas.
 
-![download](download.jpg)
+![images](images.jpg)
 
 Estado: Situación actual de un elemento del sistema, como una matrícula, una reserva, un pago o una máquina. Permite identificar su condición en un momento determinado.
 
@@ -41,7 +40,7 @@ Gimnasio: Instalación destinada a la práctica de ejercicio físico y actividad
 
 Horario: Intervalo de tiempo establecido para determinar cuándo comienza y termina una clase o actividad deportiva.
 
-![images](images.jpg)
+
 
 # M
 
@@ -53,7 +52,7 @@ Máquina de musculación: Equipamiento deportivo diseñado para realizar ejercic
 
 Músculo: Tejido del cuerpo humano que permite producir movimiento mediante su contracción. En el ámbito del entrenamiento, los músculos se agrupan según las zonas del cuerpo que se trabajan durante los ejercicios: pierna, brazo, pecho y espalda.
 
-
+![download](download.jpg)
 
 
 # P

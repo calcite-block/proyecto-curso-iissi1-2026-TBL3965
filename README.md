@@ -139,39 +139,153 @@ El entrenador será el profesional encargado de impartir las clases y actividade
 #### R.F.01. Gestión de socios
 -   Como administrador del gimnasio quiero registrar, modificar y consultar los datos de los socios para mantener actualizada su información personal.
 
+##### Prueba de aceptación
+
+- Comprobar que el administrador puede registrar un socio introduciendo sus datos personales y que el sistema almacena correctamente la información.
+  
+- Comprobar que el administrador puede consultar los datos de un socio registrado y modificar su información, verificando que los cambios quedan guardados.
+  
+- Comprobar que el sistema impide registrar un socio cuando faltan datos obligatorios o cuando los datos introducidos no cumplen los formatos establecidos.
+  
+- Se debe aplicar la regla de negocio R.N.06.
+
 #### R.F.02. Gestión de planes
 -   Como administrador del gimnasio quiero crear, modificar y consultar los planes de membresía para gestionar las diferentes opciones disponibles para los socios.
+
+##### Prueba de aceptación
+
+- Comprobar que el administrador puede crear un plan de membresía indicando sus características, duración y precio.
+  
+- Comprobar que el administrador puede consultar los planes registrados y modificar sus datos, verificando que los cambios se guardan correctamente.
+  
+- Comprobar que el sistema impide crear un plan con datos obligatorios incompletos, una duración no válida o un precio negativo.
+  
+- Se debe aplicar la regla de negocio R.N.06 y la regla de negocio R.N.11.
 
 #### R.F.03. Gestión de matrículas
 -   Como administrador del gimnasio quiero registrar y gestionar las matrículas de los socios, indicando el plan, la fecha de inicio y la fecha de fin para
   controlar la vigencia de sus membresías.
 
+##### Prueba de aceptación
+
+- Comprobar que el administrador puede registrar una matrícula para un socio, asociándola a un plan e indicando las fechas de inicio y finalización.
+  
+- Comprobar que el sistema permite consultar las matrículas registradas y muestra correctamente el plan asociado y su periodo de vigencia.
+  
+- Comprobar que el sistema impide registrar una matrícula con una fecha de finalización anterior a la fecha de inicio.
+  
+- Comprobar que el sistema impide que un socio tenga más de una matrícula activa simultáneamente.
+  
+- Se debe aplicar la regla de negocio R.N.02 y la regla de negocio R.N.06.
+
 #### R.F.04. Consulta del estado de la matrícula
 -   Como socio quiero consultar el estado y la fecha de finalización de mi matrícula para saber si mi membresía está activa y cuándo caduca.
 
+##### Prueba de aceptación
+
+- Comprobar que un socio puede consultar su matrícula y visualizar su estado y su fecha de finalización.
+  
+- Comprobar que el sistema muestra la matrícula como activa cuando la fecha actual se encuentra dentro de su periodo de vigencia y como caducada cuando ha finalizado dicho periodo.
+  
+- Comprobar que un socio únicamente puede consultar la información de sus propias matrículas y no la de otros socios.
+  
+- Se debe aplicar la regla de negocio R.N.13.
+
 #### R.F.05. Gestión de entrenadores
 -   Como administrador del gimnasio quiero registrar y gestionar los datos de los entrenadores y su especialidad para mantener actualizada la información del personal encargado de las clases.
+  
+##### Prueba de aceptación
+
+- Comprobar que el administrador puede registrar un entrenador indicando sus datos personales y su especialidad.
+  
+- Comprobar que el administrador puede consultar la información de un entrenador registrado y modificar sus datos, verificando que los cambios se guardan correctamente.
+  
+- Comprobar que el sistema impide registrar un entrenador cuando faltan datos obligatorios o la información introducida no cumple los formatos establecidos.
+  
+- Se debe aplicar la regla de negocio R.N.06.
 
 #### R.F.06. Gestión de clases
 -   Como administrador del gimnasio quiero crear y gestionar las clases, indicando su nombre, descripción, duración, capacidad máxima, y entrenador para organizar la oferta de actividades del gimnasio.
 
+##### Prueba de aceptación
+
+- Comprobar que el administrador puede crear una clase indicando su nombre, descripción, duración, capacidad máxima, entrenador, sala y horario.
+  
+- Comprobar que el administrador puede consultar las clases registradas y modificar sus datos, verificando que los cambios se guardan correctamente.
+  
+- Comprobar que el sistema no permite crear una clase sin entrenador, sala u horario asignado.
+  
+- Comprobar que la capacidad máxima de una clase no supera la capacidad de la sala en la que se realiza.
+  
+- Comprobar que el sistema impide asignar a un entrenador una clase cuyo horario se solape con otra clase que tenga asignada.
+  
+- Se debe aplicar la regla de negocio R.N.03, la regla de negocio R.N.04 y las reglas de negocio R.N.14 y R.N.15.
+
 #### R.F.07. Gestión de salas
 - Como administrador del gimnasio quiero registrar y gestionar las salas, indicando su capacidad y ubicación para organizar los espacios donde se realizan las clases.
+
+##### Prueba de aceptación
+
+- Comprobar que el administrador puede registrar una sala indicando su capacidad y ubicación.
+  
+- Comprobar que el administrador puede consultar las salas registradas y modificar sus datos, verificando que los cambios se guardan correctamente.
+  
+- Comprobar que el sistema impide registrar una sala con una capacidad igual o inferior a cero o sin los datos obligatorios.
+  
+- Comprobar que el sistema impide asignar una misma sala a dos clases cuyos horarios se solapen.
+  
+- Se debe aplicar la regla de negocio R.N.06 y la regla de negocio R.N.15.
 
 #### R.F.08. Gestión de horarios
 - Como administrador del gimnasio quiero establecer y consultar los horarios de las clases para organizar la programación de actividades del gimnasio.
 
+##### Prueba de aceptación
+
+- Comprobar que el administrador puede establecer un horario para una clase indicando su fecha y hora de inicio y finalización.
+  
+- Comprobar que el administrador puede consultar los horarios de las clases y visualizar correctamente la fecha, la hora, la sala y el entrenador asignados.
+  
+- Comprobar que el sistema impide establecer un horario cuya hora de finalización sea anterior o igual a la hora de inicio.
+  
+- Comprobar que el sistema impide programar dos clases en la misma sala durante periodos que se solapen.
+  
+- Comprobar que el sistema impide asignar al mismo entrenador dos clases cuyos horarios se solapen.
+  
+- Se debe aplicar la regla de negocio R.N.03 y la regla de negocio R.N.15.
+
 #### R.F.09. Gestión de reservas
 - Como socio quiero reservar y cancelar mi asistencia a las clases para poder organizar mi participación en las actividades del gimnasio.
+
+##### Prueba de aceptación
+
+- Comprobar que un socio con una matrícula activa puede reservar una clase cuyo horario todavía no haya comenzado y que disponga de plazas libres.
+ 
+- Comprobar que un socio puede cancelar una reserva realizada previamente y que la plaza queda disponible para otro socio.
+  
+- Comprobar que el sistema impide realizar una reserva cuando el socio no tiene una matrícula activa o su matrícula ha caducado.
+  
+- Comprobar que el sistema impide realizar una reserva cuando la clase ha comenzado o cuando se ha alcanzado la capacidad máxima permitida.
+  
+- Comprobar que el sistema impide que un socio realice varias reservas para una misma clase.
+  
+- Se debe aplicar la regla de negocio R.N.01, la regla de negocio R.N.04, la regla de negocio R.N.05 y la regla de negocio R.N.16.
 
 #### R.F.10. Gestión de pagos
 - Como administrador del gimnasio quiero registrar y consultar los pagos realizados por los socios, indicando el importe, la fecha, el método de pago y el estado para llevar un control de los pagos y de las matrículas.
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+##### Prueba de aceptación
+
+- Comprobar que el administrador puede registrar un pago asociado a un socio, indicando el importe, la fecha, el método de pago y el estado.
+
+- Comprobar que el administrador puede consultar los pagos registrados y visualizar correctamente la información de cada operación.
+ 
+- Comprobar que el sistema impide registrar pagos con importes iguales o inferiores a cero o con datos obligatorios incompletos.
+  
+- Comprobar que el sistema permite identificar los pagos asociados a un socio y a la matrícula correspondiente.
+ 
+- Comprobar que el sistema conserva el estado registrado de cada pago y permite consultar si se encuentra pendiente, realizado o rechazado, según los estados definidos por el sistema.
+ 
+- Se debe aplicar la regla de negocio R.N.06 y la regla de negocio R.N.11.
 
 #### 4.1.1. Requisitos de información
 
@@ -202,6 +316,40 @@ para [razón]
   
 ##### R.N.05. Restricciones para realizar reservas
 -   Un socio no puede reservar una clase cuyo horario ya haya comenzado ni realizar una reserva cuando su matrícula se encuentre caducada.
+
+##### R.N.06. Restricciones para realizar reservas
+-   El sistema debe comprobar que los datos obligatorios de socios, planes, matrículas, entrenadores, clases, salas, horarios y pagos estén cumplimentados y cumplan los formatos y restricciones establecidos antes de permitir su registro o modificación.
+
+##### R.N.07. Restricciones para realizar reservas
+-  El sistema debe garantizar que las relaciones entre las entidades sean válidas. Una matrícula debe estar asociada a un socio y a un plan existentes, una clase debe tener asignados un entrenador, una sala y un horario válidos, y un pago debe estar asociado al socio correspondiente.
+
+##### R.N.08. Restricciones para realizar reservas
+-  La fecha de finalización de una matrícula debe ser posterior a su fecha de inicio. El estado de la matrícula debe determinarse a partir de su periodo de vigencia y de las condiciones de activación establecidas por el sistema.
+  
+##### R.N.09. Restricciones para realizar reservas
+-  El precio de un plan de membresía no puede ser negativo y su duración debe ser un valor válido y superior a cero.
+
+##### R.N.10. Restricciones para realizar reservas
+-  La capacidad de una sala debe ser un número entero positivo. Ninguna clase podrá tener una capacidad máxima superior a la capacidad de la sala asignada.
+
+##### R.N.11. Restricciones para realizar reservas
+-  El importe de un pago debe ser superior a cero. El sistema debe validar el importe y los datos obligatorios antes de registrar la operación.
+
+##### R.N.12. Restricciones para realizar reservas
+-  Cuando un pago corresponda a una matrícula, debe quedar asociado a la matrícula y al socio correspondientes para permitir su consulta y seguimiento.
+
+##### R.N.13. Restricciones para realizar reservas
+-  Cada socio únicamente podrá consultar su propia información personal, sus matrículas y los datos relacionados con sus reservas y pagos. El administrador podrá consultar y gestionar la información de los socios de acuerdo con sus permisos.
+
+##### R.N.14. Restricciones para realizar reservas
+-  Un entrenador no puede tener asignadas dos clases cuyos horarios se solapen. El sistema debe comprobar la disponibilidad del entrenador antes de guardar o modificar la programación de una clase.
+
+##### R.N.15. Restricciones para realizar reservas
+-  Una sala no puede estar asignada a dos clases cuyos horarios se solapen. El sistema debe comprobar la disponibilidad de la sala antes de guardar o modificar la programación de una clase.
+
+##### R.N.16. Restricciones para realizar reservas
+-  Un socio no puede mantener más de una reserva activa para una misma clase programada. Si ya dispone de una reserva activa, el sistema debe impedir que registre otra para esa misma sesión.
+  
 ### 4.2. Mapa de historias de usuario (opcional)
 
 ### 4.3. Requisitos no funcionales (opcional)

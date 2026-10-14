@@ -23,6 +23,7 @@ Viendo este problema, nuestro proyecto consiste en abrir **[NOMBRE DEL GIMNASIO]
 3. **Zona de Calistenia y *Street Workout*:** Una estructura completa con barras de dominadas, paralelas y anillas pensada tanto para básicos y repeticiones como para ejercicios de tensión y lastre.
 4. **Box de *CrossFit* y Entrenamiento Funcional:** Salas amplias orientadas a entrenamientos de alta intensidad y clases colectivas dirigidas por entrenadores.
 
+<img width="1200" height="675" alt="foto gym" src="https://github.com/user-attachments/assets/d1e63ce4-f145-4db0-8282-0c4c64b955a2" />
 
 Para que un gimnasio tan grande y con tantas disciplinas funcione sin volverse un descontrol, no basta con tener las mejores instalaciones físicas; necesitamos acompañarlo desde el primer día de un Sistema de Información propio que automatice toda la gestión.
 
@@ -35,6 +36,7 @@ Cuando un centro deportivo ofrece tantas opciones (clases dirigidas, distintas s
 * **Descoordinación en horarios y entrenadores:** Cuadrar a mano qué entrenador da cada clase según su especialidad, en qué sala y a qué hora suele provocar solapamientos. Además, los entrenadores llegan a dar su clase a ciegas, sin saber cuánta gente se ha apuntado hasta que entran por la puerta.
 * **Pérdida de tiempo para el socio en recepción:** Tener que ir al mostrador o preguntar en recepción solo para saber cuándo te caduca el mes, ver los horarios de las clases o reservar plaza hace que se formen colas innecesarias y da una imagen anticuada del gimnasio.
 
+<img width="617" height="348" alt="overbooking gym" src="https://github.com/user-attachments/assets/b076c899-2454-449a-9ed2-6d6ab458753e" />
 
 ### 1.3. Clientes y usuarios en el contexto del proyecto
 
@@ -46,6 +48,7 @@ Dentro del contexto de nuestro proyecto, diferenciamos entre quién encarga el s
   * **Los entrenadores:** Los profesionales de cada área deportiva, que necesitan tener clara su agenda de clases, en qué sala les toca y qué volumen de reservas tienen para organizar la sesión.
   * **Los socios:** Los deportistas inscritos en el gimnasio, que buscan poder gestionar sus reservas a las clases y consultar el estado de su matrícula y sus pagos de forma rápida y sin complicaciones.
 
+<img width="137" height="296" alt="plan gym" src="https://github.com/user-attachments/assets/f8160ddd-f9e7-4c55-863d-e4f11b510ff3" />
 
 ### 1.4. Expectativas y objetivos
 

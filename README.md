@@ -13,18 +13,17 @@
 
 ## 2. Glosario de términos
 
-# A
+### A
 
 Actividad deportiva: Ejercicio o práctica física que se realiza para mejorar la condición física, desarrollar habilidades o mantener un estilo de vida saludable. En el gimnasio, puede realizarse de forma individual o mediante clases dirigidas.
 
-# C
+### C
 
 Clase dirigida: Actividad deportiva organizada e impartida por un entrenador, con una duración, un horario y una capacidad máxima determinados.
 
-
 Capacidad máxima: Número máximo de personas que pueden utilizar una sala o participar en una clase de forma simultánea, según los límites establecidos.
 
-# E
+### E
 
 Entrenador: Profesional encargado de dirigir actividades deportivas, orientar a los socios durante el ejercicio y supervisar el desarrollo de las clases que tiene asignadas.
 
@@ -32,17 +31,17 @@ Entrenador: Profesional encargado de dirigir actividades deportivas, orientar a 
 
 Estado: Situación actual de un elemento del sistema, como una matrícula, una reserva, un pago o una máquina. Permite identificar su condición en un momento determinado.
 
-# G
+### G
 
 Gimnasio: Instalación destinada a la práctica de ejercicio físico y actividades deportivas que dispone de espacios, equipamiento y profesionales para atender a sus usuarios.
 
-# H
+### H
 
 Horario: Intervalo de tiempo establecido para determinar cuándo comienza y termina una clase o actividad deportiva.
 
 <img src="horario.avif" alt="Horario" width="200">
 
-# M
+### M
 
 Mantenimiento de la matrícula: Control de la vigencia de la inscripción de un socio en el gimnasio, teniendo en cuenta sus fechas de inicio y finalización y su estado.
 
@@ -56,17 +55,17 @@ Músculo: Tejido del cuerpo humano que permite producir movimiento mediante su c
 
 <img src="download.jpg" alt="Músculos" width="200">
 
-# P
+### P
 
 Pago: Operación económica mediante la cual un socio abona una cantidad correspondiente a los servicios o a la membresía del gimnasio.
 
 Plan de membresía: Modalidad de inscripción que establece las condiciones económicas y temporales de acceso a los servicios del gimnasio, como su precio y duración.
 
-# R
+### R
 
 Reserva: Registro mediante el cual un socio solicita una plaza para participar en una clase dirigida. Su gestión permite controlar las plazas disponibles y la asistencia prevista.
 
-# S
+### S
 
 Sala: Espacio físico del gimnasio destinado a la realización de actividades deportivas o a la ubicación de equipamiento de entrenamiento.
 

@@ -28,6 +28,8 @@ Capacidad máxima: Número máximo de personas que pueden utilizar una sala o pa
 
 Entrenador: Profesional encargado de dirigir actividades deportivas, orientar a los socios durante el ejercicio y supervisar el desarrollo de las clases que tiene asignadas.
 
+<img src="images.jpg" alt="Entrenador" width="400">
+
 ![images](images.jpg)
 
 Estado: Situación actual de un elemento del sistema, como una matrícula, una reserva, un pago o una máquina. Permite identificar su condición en un momento determinado.
@@ -40,7 +42,7 @@ Gimnasio: Instalación destinada a la práctica de ejercicio físico y actividad
 
 Horario: Intervalo de tiempo establecido para determinar cuándo comienza y termina una clase o actividad deportiva.
 
-
+<img src="horario.avif" alt="Horario" width="400">
 
 # M
 
@@ -49,10 +51,14 @@ Mantenimiento de la matrícula: Control de la vigencia de la inscripción de un 
 Matrícula: Registro que vincula a un socio con un plan de membresía durante un periodo determinado y establece las condiciones de su inscripción en el gimnasio.
 
 Máquina de musculación: Equipamiento deportivo diseñado para realizar ejercicios de fuerza y trabajar uno o varios grupos musculares.
+<img src="maquinas.webp" alt="Máquinas de musculación" width="400">
+![maquinas](maquinas.webp)
 
 Músculo: Tejido del cuerpo humano que permite producir movimiento mediante su contracción. En el ámbito del entrenamiento, los músculos se agrupan según las zonas del cuerpo que se trabajan durante los ejercicios: pierna, brazo, pecho y espalda.
 
 ![download](download.jpg)
+
+<img src="download.jpg" alt="Músculos" width="400">
 
 
 # P

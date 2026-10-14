@@ -9,7 +9,54 @@
 
 ## 1. Introducción al problema
 
-- Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
+### 1.1. Contexto y situación actual
+
+Hoy en día, el mundo del gimnasio y el deporte de fuerza ha crecido muchísimo, ya que cada vez más gente busca entrenar en serio y cuidar su físico. Sin embargo, al analizar el sector nos encontramos con que hay muchísima competencia, pero casi toda cae en uno de estos dos extremos:
+
+* **Los gimnasios comerciales o *low-cost*:** Compiten tirando los precios, pero a cambio están siempre masificados en hora punta, les falta maquinaria específica para entrenar pesado de verdad y apenas hay seguimiento por parte de los monitores.
+* **Los centros pequeños o especializados (boxes o gimnasios de barrio):** Aunque a veces tienen buen material para una disciplina concreta, se quedan cortos si buscas variedad y, sobre todo, suelen llevar toda la gestión a la antigua (con fichas de papel, hojas de Excel sueltas o grupos de WhatsApp), lo que acaba siendo un caos tanto para el dueño como para el que va a entrenar.
+
+Viendo este problema, nuestro proyecto consiste en abrir **[NOMBRE DEL GIMNASIO]**, con el objetivo de montar el centro deportivo más completo de la zona y desmarcarnos de la competencia. La idea es juntar en una misma instalación, bien dividida por salas y zonas específicas, las cuatro grandes ramas del entrenamiento actual:
+
+1. **Zona de Culturismo y Musculación:** Equipada con máquinas seleccionadas por su biomecánica y peso libre para trabajar de forma completa todos los grupos musculares (pecho, espalda, pierna y brazo).
+2. **Zona de *Powerlifting*:** Preparada para el entrenamiento de fuerza con jaulas de potencia (*racks*), plataformas de peso muerto, bancos reglamentarios y discos calibrados.
+3. **Zona de Calistenia y *Street Workout*:** Una estructura completa con barras de dominadas, paralelas y anillas pensada tanto para básicos y repeticiones como para ejercicios de tensión y lastre.
+4. **Box de *CrossFit* y Entrenamiento Funcional:** Salas amplias orientadas a entrenamientos de alta intensidad y clases colectivas dirigidas por entrenadores.
+
+<img src="maquinas.webp" alt="Instalaciones y máquinas del gimnasio" width="350">
+
+Para que un gimnasio tan grande y con tantas disciplinas funcione sin volverse un descontrol, no basta con tener las mejores instalaciones físicas; necesitamos acompañarlo desde el primer día de un Sistema de Información propio que automatice toda la gestión.
+
+### 1.2. Problemas que queremos resolver
+
+Cuando un centro deportivo ofrece tantas opciones (clases dirigidas, distintas salas, entrenadores especializados y varios tipos de cuotas), intentar llevar el control de forma manual o con programas básicos que no están conectados entre sí genera problemas diarios muy claros:
+
+* **Salas llenas y falta de espacio (*Overbooking*):** En disciplinas como *CrossFit*, calistenia o entrenamientos guiados de fuerza, el espacio y el material (barras, jaulas, máquinas) son limitados. Si no se controla automáticamente cuánta gente reserva en función de la capacidad máxima de cada sala, se juntan demasiadas personas a la vez, se entrena mal y se pierde calidad frente a la competencia.
+* **Descontrol con las matrículas y los pagos:** Al manejar distintos planes de membresía de forma manual, es muy fácil que se pasen por alto matrículas que ya han caducado, que no quede claro quién tiene pagos pendientes o que por error administrativo se le duplique la matrícula activa a un mismo socio.
+* **Descoordinación en horarios y entrenadores:** Cuadrar a mano qué entrenador da cada clase según su especialidad, en qué sala y a qué hora suele provocar solapamientos. Además, los entrenadores llegan a dar su clase a ciegas, sin saber cuánta gente se ha apuntado hasta que entran por la puerta.
+* **Pérdida de tiempo para el socio en recepción:** Tener que ir al mostrador o preguntar en recepción solo para saber cuándo te caduca el mes, ver los horarios de las clases o reservar plaza hace que se formen colas innecesarias y da una imagen anticuada del gimnasio.
+
+<img src="horario.avif" alt="Organización de horarios del gimnasio" width="300">
+
+### 1.3. Clientes y usuarios en el contexto del proyecto
+
+Dentro del contexto de nuestro proyecto, diferenciamos entre quién encarga el sistema y quiénes lo van a usar en el día a día del gimnasio (cuyas funciones detalladas dentro de la aplicación se especificarán más adelante en el documento):
+
+* **El Cliente:** Es la **Dirección o Gerencia de [NOMBRE DEL GIMNASIO]**. Son los propietarios que invierten en el proyecto y ponen las reglas del negocio. Lo que buscan con este software es llevar las cuentas claras, evitar que entre gente con la cuota vencida, aprovechar al máximo las salas y conseguir que el gimnasio destaque por encima de cualquier competidor.
+* **Los Usuarios:** Son las personas que van a interactuar con el sistema en el gimnasio:
+  * **El personal de administración:** Los encargados de llevar el control general del centro (altas de socios, configuración de planes, matrículas, cobros y organización de salas, clases y horarios).
+  * **Los entrenadores:** Los profesionales de cada área deportiva, que necesitan tener clara su agenda de clases, en qué sala les toca y qué volumen de reservas tienen para organizar la sesión.
+  * **Los socios:** Los deportistas inscritos en el gimnasio, que buscan poder gestionar sus reservas a las clases y consultar el estado de su matrícula y sus pagos de forma rápida y sin complicaciones.
+
+<img src="images.jpg" alt="Entrenador y socios" width="250">
+
+### 1.4. Expectativas y objetivos
+
+Con la puesta en marcha de este sistema de gestión, nuestras expectativas son:
+
+1. **Centralizar toda la información del gimnasio:** Dejar atrás el papel y las hojas de cálculo sueltas para tener todos los datos de socios, matrículas, planes, pagos, entrenadores, salas, horarios y reservas guardados de forma segura y ordenada en un único sitio.
+2. **Asegurar que se cumplan las normas del centro automáticamente:** Que sea el propio programa el que impida errores habituales, como que alguien reserve con la matrícula caducada, que se supere el aforo máximo de una sala o que se intente reservar una clase que ya ha empezado.
+3. **Mejorar la experiencia diaria en el gimnasio:** Conseguir que tanto la administración como los entrenadores y los socios ahorren tiempo en gestiones, logrando que **[NOMBRE DEL GIMNASIO]** sea referente no solo por sus zonas de culturismo, *powerlifting*, calistenia y *CrossFit*, sino también por lo cómodo y bien organizado que está.
 
 ## 2. Glosario de términos
 

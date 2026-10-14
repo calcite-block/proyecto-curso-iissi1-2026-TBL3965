@@ -5,7 +5,7 @@
 1. Gallego Cal, Guillermo
 1. Sanchez Gonzalez, Alejandro
 1. Khattabi El Inani, Ilias
-1. Apellidos, Nombre
+1. Ruiz Ojeda, Jose Manuel
 
 ## 1. Introducción al problema
 
@@ -120,7 +120,97 @@ Socio: Persona inscrita en el gimnasio que dispone de una matrícula asociada a 
 
 ## 3. Visión general del sistema
 
+Legion Gym contará con un Sistema de Información diseñado para centralizar y automatizar las principales tareas administrativas y deportivas del gimnasio. El sistema permitirá gestionar los socios, las matrículas, los planes de membresía, los pagos, los entrenadores, las salas, las clases dirigidas y las reservas.
+
+La aplicación estará orientada a tres tipos de usuarios: el personal de administración, los entrenadores y los socios. Cada perfil dispondrá de unas funcionalidades específicas según sus responsabilidades y necesidades dentro del centro.
+
+El objetivo principal del sistema será mejorar la organización interna de Legion Gym, reducir los errores administrativos y facilitar el acceso a la información. Para ello, se establecerán controles automáticos que permitan comprobar la vigencia de las matrículas, gestionar las plazas disponibles en las clases y evitar conflictos en la asignación de entrenadores, salas y horarios.
+
+Además, el sistema deberá mantener la información centralizada y actualizada para que los distintos usuarios puedan consultar los datos que necesiten según sus permisos.
+
 ### 3.1. Requisitos generales
+
+Los requisitos generales definen las funcionalidades y condiciones básicas que deberá cumplir el Sistema de Información de Legion Gym para satisfacer las necesidades del gimnasio.
+
+#### 3.1.1. Gestión de socios
+
+El sistema deberá permitir al personal de administración registrar nuevos socios, consultar sus datos, modificarlos y gestionar su baja cuando corresponda. Para cada socio se almacenará la información necesaria para su identificación y contacto, así como los datos relacionados con su matrícula y su historial de pagos.
+
+Cada socio deberá disponer de un identificador único que permita distinguirlo del resto de usuarios y relacionar correctamente toda su información dentro del sistema.
+
+#### 3.1.2. Gestión de matrículas y planes de membresía
+
+La aplicación permitirá crear y gestionar diferentes planes de membresía, estableciendo sus precios, duración y condiciones de acceso a las instalaciones y actividades del gimnasio.
+
+El sistema deberá registrar las matrículas de los socios, incluyendo sus fechas de inicio y finalización y su estado actual. También deberá controlar su vigencia para impedir que los socios con una matrícula caducada o inactiva puedan realizar reservas que requieran una inscripción válida.
+
+Asimismo, se deberán evitar registros duplicados de matrículas activas cuando no estén permitidos por las normas del gimnasio.
+
+#### 3.1.3. Gestión de pagos
+
+El sistema deberá permitir registrar y consultar los pagos asociados a las matrículas de los socios. Para cada operación se almacenarán datos como el importe, la fecha, el concepto y el estado del pago.
+
+El personal de administración podrá comprobar qué socios tienen pagos pendientes y consultar el historial de operaciones económicas. El sistema deberá mantener diferenciados los pagos realizados, pendientes y rechazados, cuando corresponda.
+
+#### 3.1.4. Gestión de entrenadores
+
+La aplicación permitirá registrar y actualizar la información de los entrenadores, incluyendo sus datos identificativos, sus especialidades deportivas y las clases que tienen asignadas.
+
+Cada entrenador podrá consultar su agenda para conocer las actividades que debe impartir, los horarios correspondientes, las salas asignadas y el número de reservas registradas en cada clase.
+
+El sistema deberá impedir que un mismo entrenador tenga asignadas dos clases incompatibles en el mismo intervalo horario.
+
+#### 3.1.5. Gestión de salas y actividades deportivas
+
+El sistema permitirá registrar las salas disponibles en Legion Gym y definir sus características principales, como su nombre, su tipo de actividad y su capacidad máxima.
+
+Se podrán organizar actividades relacionadas con las diferentes disciplinas del gimnasio, como musculación, powerlifting, calistenia, CrossFit y entrenamiento funcional.
+
+La aplicación deberá controlar la disponibilidad de las salas y evitar que se programen actividades simultáneas incompatibles en un mismo espacio. También deberá impedir que una clase supere la capacidad máxima establecida.
+
+#### 3.1.6. Gestión de horarios y clases dirigidas
+
+El sistema deberá permitir crear, modificar y consultar las clases dirigidas, indicando su actividad, entrenador responsable, sala, fecha, hora de inicio, hora de finalización y número máximo de participantes.
+
+Antes de confirmar una nueva clase o modificar una existente, se deberán comprobar los posibles conflictos de horario y la disponibilidad de los recursos necesarios.
+
+Los socios podrán consultar la programación de las clases para conocer qué actividades se ofrecen y cuándo se realizan.
+
+#### 3.1.7. Gestión de reservas
+
+La aplicación permitirá a los socios reservar plazas en las clases dirigidas que tengan disponibles.
+
+Antes de confirmar una reserva, el sistema deberá comprobar que el socio dispone de una matrícula válida, que la clase admite nuevas reservas, que todavía quedan plazas libres y que la actividad no ha comenzado.
+
+También se deberá impedir que un mismo socio tenga varias reservas para una misma sesión cuando estas sean incompatibles con las normas del gimnasio.
+
+El personal autorizado podrá consultar el listado de participantes de cada clase y gestionar las reservas cuando sea necesario.
+
+#### 3.1.8. Control de acceso según el tipo de usuario
+
+El sistema deberá distinguir entre el personal de administración, los entrenadores y los socios mediante un mecanismo de identificación y control de permisos.
+
+- **Administración:** podrá gestionar los socios, las matrículas, los planes de membresía, los pagos, los entrenadores, las salas, las actividades, los horarios y las reservas.
+- **Entrenadores:** podrán consultar sus horarios, las clases asignadas y los participantes inscritos en sus sesiones.
+- **Socios:** podrán consultar su información personal, el estado de su matrícula, sus pagos y la programación de clases, además de realizar y cancelar reservas conforme a las normas establecidas.
+
+Cada usuario únicamente podrá acceder a las funciones y los datos autorizados para su perfil.
+
+#### 3.1.9. Consulta de información y disponibilidad
+
+El sistema deberá facilitar la consulta de información actualizada sobre las clases, sus horarios, las salas disponibles y las plazas libres.
+
+También deberá permitir consultar los datos relacionados con los socios, las matrículas, los pagos y las actividades, según los permisos de cada usuario.
+
+La información deberá presentarse de forma clara y organizada para facilitar las tareas administrativas y mejorar la experiencia de los socios y entrenadores.
+
+#### 3.1.10. Seguridad e integridad de los datos
+
+La aplicación deberá proteger la información almacenada mediante controles de acceso y validaciones que eviten operaciones incorrectas.
+
+Los datos de los socios, las matrículas, los pagos, los entrenadores y las reservas deberán mantenerse relacionados de forma coherente. Además, el sistema deberá evitar la pérdida de información y contemplar mecanismos de copia de seguridad y recuperación de los datos.
+
+Por último, las operaciones que modifiquen información importante deberán realizarse de forma controlada para mantener la integridad de la información del gimnasio.
 
 ### 3.2. Usuarios del sistema
 
@@ -289,16 +379,59 @@ El entrenador será el profesional encargado de impartir las clases y actividade
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
+##### R.I.01.Consulta de la agenda y listado de participantes para entrenadores
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como entrenador quiero consultar mi agenda de clases y el listado de socios inscritos en cada sesión para conocer las actividades que debo impartir y la asistencia prevista.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
+- Comprobar que un entrenador puede visualizar su calendario de clases asignadas con sus respectivos horarios, salas y tipos de actividad.
+
+- Comprobar que el entrenador puede acceder al listado actualizado de socios que han reservado plaza en una de sus clases.
+
+- Comprobar que un entrenador únicamente puede visualizar la información correspondiente a sus propias clases y no las de otros compañeros.
+
+- Se debe aplicar la regla de negocio R.N.03 y la regla de negocio R.N.13.
+
+##### R.I.02. Consulta del historial de pagos y recibos para socios
+
+Como socio quiero consultar mi historial de pagos realizados y pendientes para llevar un control de mis cuotas y comprobar el estado de mis transacciones.
+
+**Prueba de aceptación**
+- Comprobar que un socio puede acceder a una pantalla de resumen donde se listan todas sus operaciones económicas (pagos realizados, pendientes o rechazados).
+
+- Comprobar que para cada pago se muestra correctamente la fecha, el importe, el concepto y el estado del mismo.
+
+- Comprobar que un socio únicamente puede consultar sus propios datos de pago y nunca los de otros usuarios del gimnasio.
+
+- Se debe aplicar la regla de negocio R.N.11 y la regla de negocio R.N.13.
+
+#### R.I.03. Consulta general de la ocupación de salas y aforos para la administración
+
+Como administrador del gimnasio quiero consultar el estado de ocupación actual y programada de las distintas salas para optimizar el espacio y evitar problemas de capacidad.
+
+**Prueba de aceptación**
+
+- Comprobar que el administrador puede ver un panel con el listado de salas, su capacidad máxima y las actividades o clases que se están realizando en tiempo real o en un horario determinado.
+
+- Comprobar que el sistema muestra alertas visuales o indicadores cuando una sala se encuentra próxima a su límite de capacidad o experimenta solapamientos.
+
+- Comprobar que la información se actualiza de manera coherente cada vez que se añade una nueva clase o se realiza una reserva.
+
+- Se debe aplicar la regla de negocio R.N.04 y la regla de negocio R.N.15.
+
+#### R.I.04. Consulta de la programación de clases dirigidas para los socios
+
+Como socio quiero consultar la programación completa de clases dirigidas disponibles en el gimnasio filtrando por disciplina, horario o entrenador para planificar mis entrenamientos semanales.
+
+**Prueba de aceptación**
+
+- Comprobar que un socio puede visualizar la parrilla de clases semanales organizadas por zonas o disciplinas (CrossFit, calistenia, etc.).
+
+- Comprobar que el sistema muestra el número de plazas libres restantes en cada clase antes de que el socio intente realizar su reserva.
+
+- Comprobar que las clases que ya han comenzado o que no disponen de plazas libres se muestran claramente indicadas con su estado correspondiente.
+
+- Se debe aplicar la regla de negocio R.N.01 y la regla de negocio R.N.05.
 
 #### 4.1.2. Reglas de negocio
 

@@ -226,8 +226,8 @@ El entrenador será el profesional encargado de impartir las clases y actividade
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Gestión de socios
--   Como administrador del gimnasio quiero registrar, modificar y consultar los datos de los socios para mantener actualizada su información personal.
+#### R.F.01. Consulta de socios
+-   Como administrador del gimnasio quiero consultar los datos de los socios para mantener actualizada su información personal.
 
 ##### Prueba de aceptación
 
@@ -239,8 +239,8 @@ El entrenador será el profesional encargado de impartir las clases y actividade
   
 - Se debe aplicar la regla de negocio R.N.06.
 
-#### R.F.02. Gestión de planes
--   Como administrador del gimnasio quiero crear, modificar y consultar los planes de membresía para gestionar las diferentes opciones disponibles para los socios.
+#### R.F.02. Consulta de planes
+-   Como administrador del gimnasio quiero consultar los planes de membresía para gestionar las diferentes opciones disponibles para los socios.
 
 ##### Prueba de aceptación
 
@@ -252,8 +252,8 @@ El entrenador será el profesional encargado de impartir las clases y actividade
   
 - Se debe aplicar la regla de negocio R.N.06 y la regla de negocio R.N.11.
 
-#### R.F.03. Gestión de matrículas
--   Como administrador del gimnasio quiero registrar y gestionar las matrículas de los socios, indicando el plan, la fecha de inicio y la fecha de fin para
+#### R.F.03. Consulta de matrículas
+-   Como administrador del gimnasio quiero consultar las matrículas de los socios, indicando el plan, la fecha de inicio y la fecha de fin para
   controlar la vigencia de sus membresías.
 
 ##### Prueba de aceptación
@@ -281,7 +281,7 @@ El entrenador será el profesional encargado de impartir las clases y actividade
   
 - Se debe aplicar la regla de negocio R.N.13.
 
-#### R.F.05. Gestión de entrenadores
+#### R.F.05. Consulta de entrenadores
 -   Como administrador del gimnasio quiero registrar y gestionar los datos de los entrenadores y su especialidad para mantener actualizada la información del personal encargado de las clases.
   
 ##### Prueba de aceptación
@@ -294,8 +294,8 @@ El entrenador será el profesional encargado de impartir las clases y actividade
   
 - Se debe aplicar la regla de negocio R.N.06.
 
-#### R.F.06. Gestión de clases
--   Como administrador del gimnasio quiero crear y gestionar las clases, indicando su nombre, descripción, duración, capacidad máxima, y entrenador para organizar la oferta de actividades del gimnasio.
+#### R.F.06. Consulta de clases
+-   Como administrador del gimnasio quiero consultar y gestionar las clases, indicando su nombre, descripción, duración, capacidad máxima, y entrenador para organizar la oferta de actividades del gimnasio.
 
 ##### Prueba de aceptación
 
@@ -311,8 +311,8 @@ El entrenador será el profesional encargado de impartir las clases y actividade
   
 - Se debe aplicar la regla de negocio R.N.03, la regla de negocio R.N.04 y las reglas de negocio R.N.14 y R.N.15.
 
-#### R.F.07. Gestión de salas
-- Como administrador del gimnasio quiero registrar y gestionar las salas, indicando su capacidad y ubicación para organizar los espacios donde se realizan las clases.
+#### R.F.07. Consulta de salas
+- Como administrador del gimnasio quiero consultar y gestionar las salas, indicando su capacidad y ubicación para organizar los espacios donde se realizan las clases.
 
 ##### Prueba de aceptación
 
@@ -326,7 +326,7 @@ El entrenador será el profesional encargado de impartir las clases y actividade
   
 - Se debe aplicar la regla de negocio R.N.06 y la regla de negocio R.N.15.
 
-#### R.F.08. Gestión de horarios
+#### R.F.08. Consulta de horarios
 - Como administrador del gimnasio quiero establecer y consultar los horarios de las clases para organizar la programación de actividades del gimnasio.
 
 ##### Prueba de aceptación
@@ -343,8 +343,8 @@ El entrenador será el profesional encargado de impartir las clases y actividade
   
 - Se debe aplicar la regla de negocio R.N.03 y la regla de negocio R.N.15.
 
-#### R.F.09. Gestión de reservas
-- Como socio quiero reservar y cancelar mi asistencia a las clases para poder organizar mi participación en las actividades del gimnasio.
+#### R.F.09. Consultar de reservas
+- Como socio quiero  consultar mis reservas y cancelar mi asistencia a las clases para poder organizar mi participación en las actividades del gimnasio.
 
 ##### Prueba de aceptación
 
@@ -360,7 +360,7 @@ El entrenador será el profesional encargado de impartir las clases y actividade
   
 - Se debe aplicar la regla de negocio R.N.01, la regla de negocio R.N.04, la regla de negocio R.N.05 y la regla de negocio R.N.16.
 
-#### R.F.10. Gestión de pagos
+#### R.F.10. Consulta de pagos
 - Como administrador del gimnasio quiero registrar y consultar los pagos realizados por los socios, indicando el importe, la fecha, el método de pago y el estado para llevar un control de los pagos y de las matrículas.
 
 ##### Prueba de aceptación
@@ -451,36 +451,27 @@ Como socio quiero consultar la programación completa de clases dirigidas dispon
 -   Un socio no puede reservar una clase cuyo horario ya haya comenzado ni realizar una reserva cuando su matrícula se encuentre caducada.
 
 ##### R.N.06. Restricciones para realizar reservas
--   El sistema debe comprobar que los datos obligatorios de socios, planes, matrículas, entrenadores, clases, salas, horarios y pagos estén cumplimentados y cumplan los formatos y restricciones establecidos antes de permitir su registro o modificación.
-
-##### R.N.07. Restricciones para realizar reservas
--  El sistema debe garantizar que las relaciones entre las entidades sean válidas. Una matrícula debe estar asociada a un socio y a un plan existentes, una clase debe tener asignados un entrenador, una sala y un horario válidos, y un pago debe estar asociado al socio correspondiente.
-
-##### R.N.08. Restricciones para realizar reservas
 -  La fecha de finalización de una matrícula debe ser posterior a su fecha de inicio. El estado de la matrícula debe determinarse a partir de su periodo de vigencia y de las condiciones de activación establecidas por el sistema.
   
-##### R.N.09. Restricciones para realizar reservas
+##### R.N.07. Restricciones para realizar reservas
 -  El precio de un plan de membresía no puede ser negativo y su duración debe ser un valor válido y superior a cero.
 
-##### R.N.10. Restricciones para realizar reservas
+##### R.N.08. Restricciones para realizar reservas
 -  La capacidad de una sala debe ser un número entero positivo. Ninguna clase podrá tener una capacidad máxima superior a la capacidad de la sala asignada.
 
-##### R.N.11. Restricciones para realizar reservas
+##### R.N.09. Restricciones para realizar reservas
 -  El importe de un pago debe ser superior a cero. El sistema debe validar el importe y los datos obligatorios antes de registrar la operación.
 
-##### R.N.12. Restricciones para realizar reservas
--  Cuando un pago corresponda a una matrícula, debe quedar asociado a la matrícula y al socio correspondientes para permitir su consulta y seguimiento.
-
-##### R.N.13. Restricciones para realizar reservas
+##### R.N.10. Restricciones para realizar reservas
 -  Cada socio únicamente podrá consultar su propia información personal, sus matrículas y los datos relacionados con sus reservas y pagos. El administrador podrá consultar y gestionar la información de los socios de acuerdo con sus permisos.
 
-##### R.N.14. Restricciones para realizar reservas
+##### R.N.11. Restricciones para realizar reservas
 -  Un entrenador no puede tener asignadas dos clases cuyos horarios se solapen. El sistema debe comprobar la disponibilidad del entrenador antes de guardar o modificar la programación de una clase.
 
-##### R.N.15. Restricciones para realizar reservas
+##### R.N.12. Restricciones para realizar reservas
 -  Una sala no puede estar asignada a dos clases cuyos horarios se solapen. El sistema debe comprobar la disponibilidad de la sala antes de guardar o modificar la programación de una clase.
 
-##### R.N.16. Restricciones para realizar reservas
+##### R.N.13. Restricciones para realizar reservas
 -  Un socio no puede mantener más de una reserva activa para una misma clase programada. Si ya dispone de una reserva activa, el sistema debe impedir que registre otra para esa misma sesión.
   
 ### 4.2. Mapa de historias de usuario (opcional)

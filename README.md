@@ -138,21 +138,19 @@ El sistema deberá permitir al personal de administración registrar nuevos soci
 
 Cada socio deberá disponer de un identificador único que permita distinguirlo del resto de usuarios y relacionar correctamente toda su información dentro del sistema.
 
-#### 3.1.2. Gestión de matrículas y planes de membresía
-
-La aplicación permitirá crear y gestionar diferentes planes de membresía, estableciendo sus precios, duración y condiciones de acceso a las instalaciones y actividades del gimnasio.
+En relación a los socios, además, la aplicación permitirá crear y gestionar diferentes planes de membresía, estableciendo sus precios, duración y condiciones de acceso a las instalaciones y actividades del gimnasio.
 
 El sistema deberá registrar las matrículas de los socios, incluyendo sus fechas de inicio y finalización y su estado actual. También deberá controlar su vigencia para impedir que los socios con una matrícula caducada o inactiva puedan realizar reservas que requieran una inscripción válida.
 
 Asimismo, se deberán evitar registros duplicados de matrículas activas cuando no estén permitidos por las normas del gimnasio.
 
-#### 3.1.3. Gestión de pagos
+#### 3.1.2. Gestión de pagos
 
 El sistema deberá permitir registrar y consultar los pagos asociados a las matrículas de los socios. Para cada operación se almacenarán datos como el importe, la fecha, el concepto y el estado del pago.
 
 El personal de administración podrá comprobar qué socios tienen pagos pendientes y consultar el historial de operaciones económicas. El sistema deberá mantener diferenciados los pagos realizados, pendientes y rechazados, cuando corresponda.
 
-#### 3.1.4. Gestión de entrenadores
+#### 3.1.3. Gestión de entrenadores
 
 La aplicación permitirá registrar y actualizar la información de los entrenadores, incluyendo sus datos identificativos, sus especialidades deportivas y las clases que tienen asignadas.
 
@@ -160,7 +158,7 @@ Cada entrenador podrá consultar su agenda para conocer las actividades que debe
 
 El sistema deberá impedir que un mismo entrenador tenga asignadas dos clases incompatibles en el mismo intervalo horario.
 
-#### 3.1.5. Gestión de salas y actividades deportivas
+#### 3.1.4. Gestión de salas y actividades deportivas
 
 El sistema permitirá registrar las salas disponibles en Legion Gym y definir sus características principales, como su nombre, su tipo de actividad y su capacidad máxima.
 
@@ -168,15 +166,13 @@ Se podrán organizar actividades relacionadas con las diferentes disciplinas del
 
 La aplicación deberá controlar la disponibilidad de las salas y evitar que se programen actividades simultáneas incompatibles en un mismo espacio. También deberá impedir que una clase supere la capacidad máxima establecida.
 
-#### 3.1.6. Gestión de horarios y clases dirigidas
-
-El sistema deberá permitir crear, modificar y consultar las clases dirigidas, indicando su actividad, entrenador responsable, sala, fecha, hora de inicio, hora de finalización y número máximo de participantes.
+En relación con la gestión de salas, el sistema deberá permitir crear, modificar y consultar las clases dirigidas, indicando su actividad, entrenador responsable, sala, fecha, hora de inicio, hora de finalización y número máximo de participantes.
 
 Antes de confirmar una nueva clase o modificar una existente, se deberán comprobar los posibles conflictos de horario y la disponibilidad de los recursos necesarios.
 
 Los socios podrán consultar la programación de las clases para conocer qué actividades se ofrecen y cuándo se realizan.
 
-#### 3.1.7. Gestión de reservas
+#### 3.1.5. Gestión de reservas
 
 La aplicación permitirá a los socios reservar plazas en las clases dirigidas que tengan disponibles.
 
@@ -186,7 +182,7 @@ También se deberá impedir que un mismo socio tenga varias reservas para una mi
 
 El personal autorizado podrá consultar el listado de participantes de cada clase y gestionar las reservas cuando sea necesario.
 
-#### 3.1.8. Control de acceso según el tipo de usuario
+#### 3.1.6. Control de acceso según el tipo de usuario
 
 El sistema deberá distinguir entre el personal de administración, los entrenadores y los socios mediante un mecanismo de identificación y control de permisos.
 
@@ -196,7 +192,7 @@ El sistema deberá distinguir entre el personal de administración, los entrenad
 
 Cada usuario únicamente podrá acceder a las funciones y los datos autorizados para su perfil.
 
-#### 3.1.9. Consulta de información y disponibilidad
+#### 3.1.7. Consulta de información y disponibilidad
 
 El sistema deberá facilitar la consulta de información actualizada sobre las clases, sus horarios, las salas disponibles y las plazas libres.
 
@@ -204,7 +200,7 @@ También deberá permitir consultar los datos relacionados con los socios, las m
 
 La información deberá presentarse de forma clara y organizada para facilitar las tareas administrativas y mejorar la experiencia de los socios y entrenadores.
 
-#### 3.1.10. Seguridad e integridad de los datos
+#### 3.1.8. Seguridad e integridad de los datos
 
 La aplicación deberá proteger la información almacenada mediante controles de acceso y validaciones que eviten operaciones incorrectas.
 
@@ -450,28 +446,28 @@ Como socio quiero consultar la programación completa de clases dirigidas dispon
 ##### R.N.05. Restricciones para realizar reservas
 -   Un socio no puede reservar una clase cuyo horario ya haya comenzado ni realizar una reserva cuando su matrícula se encuentre caducada.
 
-##### R.N.06. Restricciones para realizar reservas
+##### R.N.06. Restricciones para gestionar matrículas
 -  La fecha de finalización de una matrícula debe ser posterior a su fecha de inicio. El estado de la matrícula debe determinarse a partir de su periodo de vigencia y de las condiciones de activación establecidas por el sistema.
   
-##### R.N.07. Restricciones para realizar reservas
+##### R.N.07. Restricciones para definir planes de membresía
 -  El precio de un plan de membresía no puede ser negativo y su duración debe ser un valor válido y superior a cero.
 
-##### R.N.08. Restricciones para realizar reservas
+##### R.N.08. Restricciones para asignar capacidades a salas y clases
 -  La capacidad de una sala debe ser un número entero positivo. Ninguna clase podrá tener una capacidad máxima superior a la capacidad de la sala asignada.
 
-##### R.N.09. Restricciones para realizar reservas
+##### R.N.09. Restricciones para registrar pagos
 -  El importe de un pago debe ser superior a cero. El sistema debe validar el importe y los datos obligatorios antes de registrar la operación.
 
-##### R.N.10. Restricciones para realizar reservas
+##### R.N.10. Restricciones para consultar y gestionar información personal
 -  Cada socio únicamente podrá consultar su propia información personal, sus matrículas y los datos relacionados con sus reservas y pagos. El administrador podrá consultar y gestionar la información de los socios de acuerdo con sus permisos.
 
-##### R.N.11. Restricciones para realizar reservas
+##### R.N.11. Restricciones para asignar horarios a entrenadores
 -  Un entrenador no puede tener asignadas dos clases cuyos horarios se solapen. El sistema debe comprobar la disponibilidad del entrenador antes de guardar o modificar la programación de una clase.
 
-##### R.N.12. Restricciones para realizar reservas
+##### R.N.12. Restricciones para asignar horarios a salas
 -  Una sala no puede estar asignada a dos clases cuyos horarios se solapen. El sistema debe comprobar la disponibilidad de la sala antes de guardar o modificar la programación de una clase.
 
-##### R.N.13. Restricciones para realizar reservas
+##### R.N.13. Restricciones para registrar reservas de una misma clase
 -  Un socio no puede mantener más de una reserva activa para una misma clase programada. Si ya dispone de una reserva activa, el sistema debe impedir que registre otra para esa misma sesión.
   
 ### 4.2. Mapa de historias de usuario (opcional)

@@ -433,42 +433,68 @@ Como socio quiero consultar la programación completa de clases dirigidas dispon
 
 ##### R.N.01. Matrícula activa para realizar reservas
 -   Un socio debe tener una matrícula activa para poder realizar una reserva en una clase.
+-   Una persona sin matrícula intenta realizar una reserva, pero no le deja.
+-   Una persona con matrícula intenta realizar una reserva y si le deja.
 
 ##### R.N.02. Una única matrícula activa
 -   Un socio no puede tener más de una matrícula activa al mismo tiempo.
+-   Una persona sin matrícula intenta activar una y lo hace sin problema.
+-   Una persona con matrícula intenta activar otra y no le deja.
 
 ##### R.N.03. Asignación de clases
 -   Cada clase debe estar asociada a un entrenador, una sala y un horario determinado.
+-   Se intenta hacer una clase pero no tiene entrenador, sala, u horario y no lo permite.
+-   Se intenta hacer una clase con entrenador, sala, y horario asignados y lo permite.
 
 ##### R.N.04. Capacidad máxima de las clases
 -   El número de reservas de una clase no puede superar la capacidad máxima de la sala donde se realiza.
+-   Se intenta reservar una clase que ya cumple la capacidad máxima, y no lo permite.
+-   Se intenta reservar una clase que aún no cumple la capacidad máxima y lo permite.
   
 ##### R.N.05. Restricciones para realizar reservas
--   Un socio no puede reservar una clase cuyo horario ya haya comenzado ni realizar una reserva cuando su matrícula se encuentre caducada.
+-   Un socio no puede reservar una clase cuyo horario ya haya comenzado.
+-   Un socio intenta hacer una reserva de una clase ya comenzada, y no lo permite.
+-   Un socio intenta hacer una reserva de una clase aún no comenzada y se lo permite.
 
 ##### R.N.06. Restricciones para gestionar matrículas
 -  La fecha de finalización de una matrícula debe ser posterior a su fecha de inicio. El estado de la matrícula debe determinarse a partir de su periodo de vigencia y de las condiciones de activación establecidas por el sistema.
+-  Se intenta crear una matrícula con fecha de finalización anterior a la de inicio, y no lo permite.
+-  Se intenta crear una matrícula con fecha de finalización posterior a la de inicio, y lo permite.
   
 ##### R.N.07. Restricciones para definir planes de membresía
 -  El precio de un plan de membresía no puede ser negativo y su duración debe ser un valor válido y superior a cero.
+-  Se intenta crear un plan de membresía con valor negativo y duración 0, y no lo permite.
+-  Se intenta crear un plan de membresía con valor positivo y duración superior a 0, y lo permite.
 
 ##### R.N.08. Restricciones para asignar capacidades a salas y clases
 -  La capacidad de una sala debe ser un número entero positivo. Ninguna clase podrá tener una capacidad máxima superior a la capacidad de la sala asignada.
+-  Se intenta asignar una capacidad negativa a la sala, y no lo permite.
+-  Se intent asignar una capacidad positiva a la sala y lo permite.
 
 ##### R.N.09. Restricciones para registrar pagos
 -  El importe de un pago debe ser superior a cero. El sistema debe validar el importe y los datos obligatorios antes de registrar la operación.
+-  Se intenta realizar un pago con coste menor o igual a 0, y no lo permite.
+-  Se intenta realizar un pago con coste mayor a 0 y lo permite.
 
 ##### R.N.10. Restricciones para consultar y gestionar información personal
 -  Cada socio únicamente podrá consultar su propia información personal, sus matrículas y los datos relacionados con sus reservas y pagos. El administrador podrá consultar y gestionar la información de los socios de acuerdo con sus permisos.
+-  Un socio intenta consultar los datos y matrícula de otro socio, y no lo permite.
+-  Un socio intenta consultar los datos y matrícula propios y lo permite.
 
 ##### R.N.11. Restricciones para asignar horarios a entrenadores
 -  Un entrenador no puede tener asignadas dos clases cuyos horarios se solapen. El sistema debe comprobar la disponibilidad del entrenador antes de guardar o modificar la programación de una clase.
+-  Se intenta asignar a un entrenador varias clases cuyos horarios solapan, y no lo permite.
+-  Se intenta asignar a un entrenador varias clases cuyos horarios no solapan y lo permite.
 
 ##### R.N.12. Restricciones para asignar horarios a salas
 -  Una sala no puede estar asignada a dos clases cuyos horarios se solapen. El sistema debe comprobar la disponibilidad de la sala antes de guardar o modificar la programación de una clase.
+-  Se intenta asignar a una sala varias clases cuyos horarios solapan, y no lo permite.
+-  Se intenta asignar a una sala varias clases cuyos horarios no solapan y lo permite.
 
 ##### R.N.13. Restricciones para registrar reservas de una misma clase
 -  Un socio no puede mantener más de una reserva activa para una misma clase programada. Si ya dispone de una reserva activa, el sistema debe impedir que registre otra para esa misma sesión.
+-  Un socio intenta hacer una reserva a una clase que ya tiene reservada, y no lo permite.
+-  Un socio intenta hacer una reserva a una clase que no tiene reservada y lo permite.
   
 ### 4.2. Mapa de historias de usuario (opcional)
 

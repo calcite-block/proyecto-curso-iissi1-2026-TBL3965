@@ -515,7 +515,162 @@ para [razón]
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+Los escenarios comprueban que el modelo conceptual representa situaciones reales de Legion Gym y que las restricciones permiten distinguir los casos válidos de los que deben rechazarse.
+
+En los diagramas de objetos:
+
+- Los objetos y enlaces en negro son válidos.
+- Los objetos y enlaces en rojo discontinuo son los que el sistema rechaza.
+- Los valores en rojo son los que incumplen la restricción.
+- Las notas indican la regla de negocio que justifica el rechazo.
+- EP-01 muestra el modelo completo. En el resto se incluyen solo los objetos, atributos y enlaces relevantes para la regla comprobada.
+
+| Escenario | Situación | Tipo | Restricción comprobada |
+|:---|:---|:---|:---|
+| EP-01 | Funcionamiento habitual del gimnasio | Válido | R.N.01, R.N.03, R.N.04, R.N.05, R.N.06, R.N.07, R.N.08, R.N.09, R.N.13 (caso permitido) |
+| EP-02 | Jerarquía de personas {solapada, completa} | Válido y rechazado | Generalización de Persona |
+| EP-03 | Reserva con y sin matrícula activa | Válido y rechazado | R.N.01 |
+| EP-04 | Segunda matrícula activa | Rechazado | R.N.02 |
+| EP-05 | Clase sin todos sus recursos | Válido y rechazado | R.N.03 |
+| EP-06 | Aforo de la clase completo | Válido y rechazado | R.N.04 |
+| EP-07 | Reserva de una clase ya comenzada | Válido y rechazado | R.N.05 |
+| EP-08 | Validación de matrículas, planes y cuotas | Válido y rechazado | R.N.06, R.N.07, R.N.09 |
+| EP-09 | Capacidad de salas y clases | Válido y rechazado | R.N.08 |
+| EP-10 | Acceso a la información personal | Válido y rechazado | R.N.10 |
+| EP-11 | Horarios solapados de un entrenador | Válido y rechazado | R.N.11 |
+| EP-12 | Horarios solapados en una sala | Válido y rechazado | R.N.12 |
+| EP-13 | Reserva duplicada de una clase | Válido y rechazado | R.N.13 |
+
+#### EP-01. Funcionamiento habitual del gimnasio
+
+**Restricción comprobada:** R.N.01, R.N.03, R.N.04, R.N.05, R.N.06, R.N.07, R.N.08, R.N.09, R.N.13 (caso permitido).
+
+**Descripción:** Lucía se da de alta con el plan Semestral y su matrícula está activa. Paga la cuota de noviembre y, el jueves 05/11/2026, reserva plaza en la clase WOD CrossFit del lunes siguiente, de 18:00 a 19:00. Diego imparte la clase en el Box CrossFit, con capacidad para 20 personas, donde hay un remo que trabaja la espalda. Este escenario instancia todas las clases y asociaciones del modelo.
+
+**Resultado esperado:** El sistema acepta todos los objetos y enlaces: se cumplen las multiplicidades y las reglas de negocio.
+
+<img src="diagramas-objetos/EP-01.png" alt="Diagrama de objetos del escenario EP-01">
+
+#### EP-02. Jerarquía de personas {solapada, completa}
+
+**Restricción comprobada:** Generalización de Persona.
+
+**Descripción:** Marta es entrenadora de calistenia y también está matriculada como socia. Se intenta registrar además a Ana, de quien solo se conocen sus datos personales, sin ser socia ni entrenadora.
+
+**Resultado esperado:** Se acepta a Marta porque la jerarquía es solapada y una persona puede ser socia y entrenadora a la vez. Se rechaza a Ana porque la jerarquía es completa.
+
+<img src="diagramas-objetos/EP-02.png" alt="Diagrama de objetos del escenario EP-02">
+
+#### EP-03. Reserva con y sin matrícula activa
+
+**Restricción comprobada:** R.N.01.
+
+**Descripción:** Lucía, con la matrícula activa, reserva plaza en WOD CrossFit. Pablo, cuya matrícula caducó el 31/08/2026, intenta reservar en la misma clase.
+
+**Resultado esperado:** Se registra la reserva de Lucía y se rechaza la de Pablo.
+
+<img src="diagramas-objetos/EP-03.png" alt="Diagrama de objetos del escenario EP-03">
+
+#### EP-04. Segunda matrícula activa
+
+**Restricción comprobada:** R.N.02.
+
+**Descripción:** Lucía tiene una matrícula activa hasta el 28/02/2027 y se intenta registrarle otra del plan Mensual para noviembre, cuyo periodo coincide con el de la primera.
+
+**Resultado esperado:** Se conserva la matrícula `mat1` y se rechaza `mat4`. Un socio sin matrícula activa sí podría activar una sin problema.
+
+<img src="diagramas-objetos/EP-04.png" alt="Diagrama de objetos del escenario EP-04">
+
+#### EP-05. Clase sin todos sus recursos
+
+**Restricción comprobada:** R.N.03.
+
+**Descripción:** La clase WOD CrossFit tiene entrenador, sala y horario. Se intenta crear la clase Técnica de sentadilla indicando únicamente la sala.
+
+**Resultado esperado:** Se acepta WOD CrossFit y se rechaza Técnica de sentadilla hasta que tenga entrenador y horario.
+
+<img src="diagramas-objetos/EP-05.png" alt="Diagrama de objetos del escenario EP-05">
+
+#### EP-06. Aforo de la clase completo
+
+**Restricción comprobada:** R.N.04.
+
+**Descripción:** La sala Plataforma 1 tiene capacidad para 2 personas, igual que la clase Peso muerto avanzado. Lucía y Pablo ocupan las dos plazas y Sara intenta realizar una tercera reserva. Los tres tienen la matrícula activa.
+
+**Resultado esperado:** Se aceptan las dos primeras reservas y se rechaza la tercera. Si se cancelase una reserva activa, Sara podría reservar.
+
+<img src="diagramas-objetos/EP-06.png" alt="Diagrama de objetos del escenario EP-06">
+
+#### EP-07. Reserva de una clase ya comenzada
+
+**Restricción comprobada:** R.N.05.
+
+**Descripción:** El lunes 09/11/2026, la clase WOD CrossFit empieza a las 18:00. Lucía reserva a las 17:30 y Sara lo intenta a las 18:10, cuando la sesión ya ha comenzado. Ambas tienen la matrícula activa y quedan plazas.
+
+**Resultado esperado:** Se acepta la reserva de Lucía y se rechaza la de Sara.
+
+<img src="diagramas-objetos/EP-07.png" alt="Diagrama de objetos del escenario EP-07">
+
+#### EP-08. Validación de matrículas, planes y cuotas
+
+**Restricción comprobada:** R.N.06, R.N.07, R.N.09.
+
+**Descripción:** Se comprueban los valores de tres pares de objetos. Se omiten sus enlaces porque las reglas solo dependen de sus atributos: una matrícula que termina antes de empezar, un plan con precio negativo y duración 0, y una cuota de importe 0.
+
+**Resultado esperado:** Se aceptan `mat_ok`, `plan_ok` y `cuota_ok`. Se rechazan `mat_mal`, `plan_mal` y `cuota_mal`.
+
+<img src="diagramas-objetos/EP-08.png" alt="Diagrama de objetos del escenario EP-08">
+
+#### EP-09. Capacidad de salas y clases
+
+**Restricción comprobada:** R.N.08.
+
+**Descripción:** En el Box CrossFit, con capacidad 20, se programa WOD CrossFit para 20 personas y se intenta programar WOD Open para 25. También se intenta registrar una sala con capacidad negativa.
+
+**Resultado esperado:** Se acepta WOD CrossFit. Se rechazan WOD Open y Sala Anexa.
+
+<img src="diagramas-objetos/EP-09.png" alt="Diagrama de objetos del escenario EP-09">
+
+#### EP-10. Acceso a la información personal
+
+**Restricción comprobada:** R.N.10.
+
+**Descripción:** Con los mismos objetos, Lucía consulta su matrícula e intenta consultar también la de Pablo. El administrador puede consultar ambas. El diagrama no representa un cambio en los datos, sino a qué objetos puede acceder cada usuario.
+
+**Resultado esperado:** Lucía obtiene los datos de `mat1`, y el sistema deniega su acceso a `mat3`.
+
+<img src="diagramas-objetos/EP-10.png" alt="Diagrama de objetos del escenario EP-10">
+
+#### EP-11. Horarios solapados de un entrenador
+
+**Restricción comprobada:** R.N.11.
+
+**Descripción:** Diego imparte los lunes WOD CrossFit, de 18:00 a 19:00, y Funcional, de 19:00 a 20:00. Se intenta asignarle también HIIT, de 18:30 a 19:30.
+
+**Resultado esperado:** Se aceptan las dos primeras clases, que son consecutivas pero no se solapan. Se rechaza HIIT.
+
+<img src="diagramas-objetos/EP-11.png" alt="Diagrama de objetos del escenario EP-11">
+
+#### EP-12. Horarios solapados en una sala
+
+**Restricción comprobada:** R.N.12.
+
+**Descripción:** El Box CrossFit alberga WOD CrossFit los lunes de 18:00 a 19:00 y Movilidad los martes a la misma hora. Se intenta programar Kettlebells los lunes de 18:45 a 19:45 en esa sala.
+
+**Resultado esperado:** Se aceptan WOD CrossFit y Movilidad, que se imparten en días distintos. Se rechaza Kettlebells.
+
+<img src="diagramas-objetos/EP-12.png" alt="Diagrama de objetos del escenario EP-12">
+
+#### EP-13. Reserva duplicada de una clase
+
+**Restricción comprobada:** R.N.13.
+
+**Descripción:** Lucía reserva WOD CrossFit, vuelve a intentar reservar la misma clase y después reserva Movilidad.
+
+**Resultado esperado:** Se aceptan `r1` y `r3`, que son de clases distintas, y se rechaza `r2`.
+
+<img src="diagramas-objetos/EP-13.png" alt="Diagrama de objetos del escenario EP-13">
+
 
 ## 6. Matrices de trazabilidad
 

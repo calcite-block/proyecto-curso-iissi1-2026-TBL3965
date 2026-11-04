@@ -519,17 +519,105 @@ para [razón]
 
 ## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
+La trazabilidad se divide en tres matrices para que los elementos del modelo conceptual puedan consultarse con claridad. La X indica que el elemento participa en el requisito.
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+En el modelo, el concepto de pago de los requisitos se representa con la entidad Cuota. Las restricciones son las reglas de negocio R.N.01 a R.N.13 recogidas en el diagrama.
+
+### 6.1. Requisitos y entidades
+
+| Requisito | Persona | Socio | Entrenador | Plan | Matrícula | Cuota | Reserva | Clase | Horario | Sala | Máquina | Músculo |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| R.I.01 | X | X | X |   |   |   | X | X | X | X |   |   |
+| R.I.02 |   | X |   |   |   | X |   |   |   |   |   |   |
+| R.I.03 |   |   |   |   |   |   | X | X | X | X |   |   |
+| R.I.04 | X |   | X |   |   |   | X | X | X | X |   |   |
+| R.F.01 | X | X |   |   |   |   |   |   |   |   |   |   |
+| R.F.02 |   |   |   | X |   |   |   |   |   |   |   |   |
+| R.F.03 |   | X |   | X | X |   |   |   |   |   |   |   |
+| R.F.04 |   | X |   |   | X |   |   |   |   |   |   |   |
+| R.F.05 | X |   | X |   |   |   |   |   |   |   |   |   |
+| R.F.06 |   |   | X |   |   |   |   | X | X | X |   |   |
+| R.F.07 |   |   |   |   |   |   |   | X | X | X |   |   |
+| R.F.08 |   |   | X |   |   |   |   | X | X | X |   |   |
+| R.F.09 |   | X |   |   | X |   | X | X | X | X |   |   |
+| R.F.10 |   | X |   |   | X | X |   |   |   |   |   |   |
+| R.N.01 |   | X |   |   | X |   | X |   |   |   |   |   |
+| R.N.02 |   | X |   |   | X |   |   |   |   |   |   |   |
+| R.N.03 |   |   | X |   |   |   |   | X | X | X |   |   |
+| R.N.04 |   |   |   |   |   |   | X | X |   | X |   |   |
+| R.N.05 |   | X |   |   | X |   | X | X | X |   |   |   |
+| R.N.06 |   |   |   |   | X |   |   |   |   |   |   |   |
+| R.N.07 |   |   |   | X |   |   |   |   |   |   |   |   |
+| R.N.08 |   |   |   |   |   |   |   | X |   | X |   |   |
+| R.N.09 |   |   |   |   |   | X |   |   |   |   |   |   |
+| R.N.10 | X | X |   |   | X | X | X |   |   |   |   |   |
+| R.N.11 |   |   | X |   |   |   |   | X | X |   |   |   |
+| R.N.12 |   |   |   |   |   |   |   | X | X | X |   |   |
+| R.N.13 |   | X |   |   |   |   | X | X |   |   |   |   |
+
+### 6.2. Requisitos y asociaciones
+
+| Requisito | Generalización de Persona | contrata | corresponde a | paga | realiza | recibe | alberga | imparte | tiene | contiene | trabaja |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| R.I.01 | X |   |   |   | X | X | X | X | X |   |   |
+| R.I.02 |   |   |   | X |   |   |   |   |   |   |   |
+| R.I.03 |   |   |   |   |   | X | X |   | X |   |   |
+| R.I.04 | X |   |   |   |   | X | X | X | X |   |   |
+| R.F.01 | X |   |   |   |   |   |   |   |   |   |   |
+| R.F.02 |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.03 |   | X | X |   |   |   |   |   |   |   |   |
+| R.F.04 |   | X |   |   |   |   |   |   |   |   |   |
+| R.F.05 | X |   |   |   |   |   |   |   |   |   |   |
+| R.F.06 |   |   |   |   |   |   | X | X | X |   |   |
+| R.F.07 |   |   |   |   |   |   | X |   | X |   |   |
+| R.F.08 |   |   |   |   |   |   | X | X | X |   |   |
+| R.F.09 |   | X |   |   | X | X | X |   | X |   |   |
+| R.F.10 |   | X |   | X |   |   |   |   |   |   |   |
+| R.N.01 |   | X |   |   | X |   |   |   |   |   |   |
+| R.N.02 |   | X |   |   |   |   |   |   |   |   |   |
+| R.N.03 |   |   |   |   |   |   | X | X | X |   |   |
+| R.N.04 |   |   |   |   |   | X | X |   |   |   |   |
+| R.N.05 |   | X |   |   | X | X |   |   | X |   |   |
+| R.N.06 |   |   |   |   |   |   |   |   |   |   |   |
+| R.N.07 |   |   |   |   |   |   |   |   |   |   |   |
+| R.N.08 |   |   |   |   |   |   | X |   |   |   |   |
+| R.N.09 |   |   |   |   |   |   |   |   |   |   |   |
+| R.N.10 | X | X |   | X | X |   |   |   |   |   |   |
+| R.N.11 |   |   |   |   |   |   |   | X | X |   |   |
+| R.N.12 |   |   |   |   |   |   | X |   | X |   |   |
+| R.N.13 |   |   |   |   | X | X |   |   |   |   |   |
+
+### 6.3. Requisitos y restricciones
+
+| Requisito | R.N.01 | R.N.02 | R.N.03 | R.N.04 | R.N.05 | R.N.06 | R.N.07 | R.N.08 | R.N.09 | R.N.10 | R.N.11 | R.N.12 | R.N.13 |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| R.I.01 |   |   | X |   |   |   |   |   |   |   |   |   |   |
+| R.I.02 |   |   |   |   |   |   |   |   | X | X |   |   |   |
+| R.I.03 |   |   |   | X |   |   |   | X |   |   |   | X |   |
+| R.I.04 |   |   |   | X | X |   |   |   |   |   |   |   |   |
+| R.F.01 |   |   |   |   |   |   |   |   |   | X |   |   |   |
+| R.F.02 |   |   |   |   |   |   | X |   |   |   |   |   |   |
+| R.F.03 |   | X |   |   |   | X |   |   |   |   |   |   |   |
+| R.F.04 |   |   |   |   |   | X |   |   |   | X |   |   |   |
+| R.F.05 |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.06 |   |   | X |   |   |   |   | X |   |   | X | X |   |
+| R.F.07 |   |   |   |   |   |   |   | X |   |   |   | X |   |
+| R.F.08 |   |   | X |   |   |   |   |   |   |   | X | X |   |
+| R.F.09 | X |   |   | X | X |   |   |   |   | X |   |   | X |
+| R.F.10 |   |   |   |   |   |   |   |   | X |   |   |   |   |
+| R.N.01 | X |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.N.02 |   | X |   |   |   |   |   |   |   |   |   |   |   |
+| R.N.03 |   |   | X |   |   |   |   |   |   |   |   |   |   |
+| R.N.04 |   |   |   | X |   |   |   |   |   |   |   |   |   |
+| R.N.05 |   |   |   |   | X |   |   |   |   |   |   |   |   |
+| R.N.06 |   |   |   |   |   | X |   |   |   |   |   |   |   |
+| R.N.07 |   |   |   |   |   |   | X |   |   |   |   |   |   |
+| R.N.08 |   |   |   |   |   |   |   | X |   |   |   |   |   |
+| R.N.09 |   |   |   |   |   |   |   |   | X |   |   |   |   |
+| R.N.10 |   |   |   |   |   |   |   |   |   | X |   |   |   |
+| R.N.11 |   |   |   |   |   |   |   |   |   |   | X |   |   |
+| R.N.12 |   |   |   |   |   |   |   |   |   |   |   | X |   |
+| R.N.13 |   |   |   |   |   |   |   |   |   |   |   |   | X |
 
 -- fin entregable 2 --
 

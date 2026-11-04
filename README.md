@@ -549,7 +549,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** El sistema acepta todos los objetos y enlaces: se cumplen las multiplicidades y las reglas de negocio.
 
-<img src="diagramas-objetos/EP-01.png" alt="Diagrama de objetos del escenario EP-01">
+<img width="1549" height="983" alt="EP-01" src="https://github.com/user-attachments/assets/7feefefc-46f6-4233-9ac8-65c1a219e99d" />
+
 
 #### EP-02. Jerarquía de personas {solapada, completa}
 
@@ -559,7 +560,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se acepta a Marta porque la jerarquía es solapada y una persona puede ser socia y entrenadora a la vez. Se rechaza a Ana porque la jerarquía es completa.
 
-<img src="diagramas-objetos/EP-02.png" alt="Diagrama de objetos del escenario EP-02">
+<img width="1026" height="518" alt="EP-02" src="https://github.com/user-attachments/assets/c2f85902-d7fe-4189-8e78-f13ac06be1dd" />
+
 
 #### EP-03. Reserva con y sin matrícula activa
 
@@ -569,7 +571,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se registra la reserva de Lucía y se rechaza la de Pablo.
 
-<img src="diagramas-objetos/EP-03.png" alt="Diagrama de objetos del escenario EP-03">
+<img width="859" height="669" alt="EP-03" src="https://github.com/user-attachments/assets/b60ce3c7-5805-4140-bf3a-36b96e81b487" />
+
 
 #### EP-04. Segunda matrícula activa
 
@@ -579,7 +582,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se conserva la matrícula `mat1` y se rechaza `mat4`. Un socio sin matrícula activa sí podría activar una sin problema.
 
-<img src="diagramas-objetos/EP-04.png" alt="Diagrama de objetos del escenario EP-04">
+<img width="886" height="528" alt="EP-04" src="https://github.com/user-attachments/assets/667c3c75-8130-4ccb-be1b-9473eace135e" />
+
 
 #### EP-05. Clase sin todos sus recursos
 
@@ -589,7 +593,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se acepta WOD CrossFit y se rechaza Técnica de sentadilla hasta que tenga entrenador y horario.
 
-<img src="diagramas-objetos/EP-05.png" alt="Diagrama de objetos del escenario EP-05">
+<img width="1229" height="438" alt="EP-05" src="https://github.com/user-attachments/assets/0decea0d-3175-4b6a-b5df-66debdbe69f1" />
+
 
 #### EP-06. Aforo de la clase completo
 
@@ -599,7 +604,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se aceptan las dos primeras reservas y se rechaza la tercera. Si se cancelase una reserva activa, Sara podría reservar.
 
-<img src="diagramas-objetos/EP-06.png" alt="Diagrama de objetos del escenario EP-06">
+<img width="1351" height="719" alt="EP-06" src="https://github.com/user-attachments/assets/44efdcc2-1fd4-4eb2-8b2a-20025ca54c30" />
+
 
 #### EP-07. Reserva de una clase ya comenzada
 
@@ -609,7 +615,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se acepta la reserva de Lucía y se rechaza la de Sara.
 
-<img src="diagramas-objetos/EP-07.png" alt="Diagrama de objetos del escenario EP-07">
+<img width="929" height="599" alt="EP-07" src="https://github.com/user-attachments/assets/c00fcf9b-6348-496f-bbbe-e273b90caecb" />
+
 
 #### EP-08. Validación de matrículas, planes y cuotas
 
@@ -619,7 +626,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se aceptan `mat_ok`, `plan_ok` y `cuota_ok`. Se rechazan `mat_mal`, `plan_mal` y `cuota_mal`.
 
-<img src="diagramas-objetos/EP-08.png" alt="Diagrama de objetos del escenario EP-08">
+<img width="731" height="953" alt="EP-08" src="https://github.com/user-attachments/assets/5c1f2c64-2c3b-48fd-a252-547ec42826c2" />
+
 
 #### EP-09. Capacidad de salas y clases
 
@@ -629,7 +637,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se acepta WOD CrossFit. Se rechazan WOD Open y Sala Anexa.
 
-<img src="diagramas-objetos/EP-09.png" alt="Diagrama de objetos del escenario EP-09">
+<img width="921" height="470" alt="EP-09" src="https://github.com/user-attachments/assets/1a310313-764e-458b-8263-fb85254c7d38" />
+
 
 #### EP-10. Acceso a la información personal
 
@@ -639,7 +648,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Lucía obtiene los datos de `mat1`, y el sistema deniega su acceso a `mat3`.
 
-<img src="diagramas-objetos/EP-10.png" alt="Diagrama de objetos del escenario EP-10">
+<img width="927" height="550" alt="EP-10" src="https://github.com/user-attachments/assets/898c5db8-d8bd-4f0e-8d12-748a91edafa4" />
+
 
 #### EP-11. Horarios solapados de un entrenador
 
@@ -649,7 +659,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se aceptan las dos primeras clases, que son consecutivas pero no se solapan. Se rechaza HIIT.
 
-<img src="diagramas-objetos/EP-11.png" alt="Diagrama de objetos del escenario EP-11">
+<img width="1302" height="533" alt="EP-11" src="https://github.com/user-attachments/assets/323101d4-4007-4317-906c-745f6f5f27dc" />
+
 
 #### EP-12. Horarios solapados en una sala
 
@@ -659,7 +670,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se aceptan WOD CrossFit y Movilidad, que se imparten en días distintos. Se rechaza Kettlebells.
 
-<img src="diagramas-objetos/EP-12.png" alt="Diagrama de objetos del escenario EP-12">
+<img width="1353" height="533" alt="EP-12" src="https://github.com/user-attachments/assets/b7aaeea4-9433-4e7f-91d9-e7ad7080e9d3" />
+
 
 #### EP-13. Reserva duplicada de una clase
 
@@ -669,7 +681,8 @@ En los diagramas de objetos:
 
 **Resultado esperado:** Se aceptan `r1` y `r3`, que son de clases distintas, y se rechaza `r2`.
 
-<img src="diagramas-objetos/EP-13.png" alt="Diagrama de objetos del escenario EP-13">
+<img width="985" height="577" alt="EP-13" src="https://github.com/user-attachments/assets/1b5b23c1-e4d2-4586-bb75-774f0cefd208" />
+
 
 
 ## 6. Matrices de trazabilidad

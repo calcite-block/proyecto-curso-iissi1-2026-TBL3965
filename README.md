@@ -511,7 +511,7 @@ para [razón]
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+<img src="Captura de pantalla 2026-11-04 193102" alt="Modelo Conceptual" width="200">
 
 ### 5.2. Escenarios de prueba
 
